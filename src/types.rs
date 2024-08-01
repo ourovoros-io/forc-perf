@@ -1,14 +1,12 @@
+use crossbeam_channel::{unbounded, Receiver, Sender};
+use serde::{Deserialize, Serialize};
 use std::{
     io::BufRead,
-    ops::{Deref, DerefMut},
     path::PathBuf,
     process::{Child, Command, Stdio},
     sync::{Arc, Mutex},
     time::{Duration, Instant},
 };
-
-use crossbeam_channel::{unbounded, Receiver, Sender};
-use serde::{Deserialize, Serialize};
 
 /// A collection of benchmarks and system specifications.
 #[derive(Debug, Serialize)]
@@ -25,13 +23,13 @@ pub struct Benchmark {
     /// The path to the benchmark's project folder.
     pub path: PathBuf,
     /// The start time of the benchmark.
-    pub start_time: Option<SerdeInstant>,
+    pub start_time: Option<Duration>,
     /// The end time of the benchmark.
-    pub end_time: Option<SerdeInstant>,
+    pub end_time: Option<Duration>,
     /// The phases of the benchmark.
     pub phases: Vec<BenchmarkPhase>,
     /// The performance frames collected from the benchmark.
-    pub frames: SerdeFrames,
+    pub frames: Arc<Mutex<Vec<BenchmarkFrame>>>,
 }
 
 impl Benchmark {
@@ -49,7 +47,7 @@ impl Benchmark {
     }
 
     /// Runs the benchmark.
-    pub fn run(&mut self) {
+    pub fn run(&mut self, epoch: &Instant) {
         // Ensure the benchmark's path is a directory we can run `forc build` in
         assert!(
             self.verify_path(),
@@ -58,7 +56,7 @@ impl Benchmark {
         );
 
         // Set the start time of the benchmark
-        self.start_time = Some(Instant::now().into());
+        self.start_time = Some(epoch.elapsed());
 
         // Spawn the `forc build` child command in the benchmark's directory
         // NOTE: stdin and stdout are piped so that we can use them to signal individual phases
@@ -90,6 +88,7 @@ impl Benchmark {
         let (stop_perf_tx, stop_perf_rx) = unbounded();
 
         Self::spawn_perf_thread(
+            epoch,
             pid,
             stop_perf_rx,
             stop_readline_rx.clone(),
@@ -100,10 +99,16 @@ impl Benchmark {
         Self::spawn_readline_thread(&mut command, stop_readline_rx, readline_tx);
 
         // Collect frames for each phase of the command
-        self.wait(&mut command, &stop_readline_tx, &stop_perf_tx, &readline_rx);
+        self.wait(
+            epoch,
+            &mut command,
+            &stop_readline_tx,
+            &stop_perf_tx,
+            &readline_rx,
+        );
 
         // Set the end time of the benchmark
-        self.end_time = Some(Instant::now().into());
+        self.end_time = Some(epoch.elapsed());
     }
 
     pub fn verify_path(&self) -> bool {
@@ -157,6 +162,7 @@ impl Benchmark {
 
     fn wait(
         &mut self,
+        epoch: &Instant,
         command: &mut Child,
         stop_readline_tx: &Sender<()>,
         stop_perf_tx: &Sender<()>,
@@ -191,7 +197,7 @@ impl Benchmark {
                 // Add the phase to the current benchmark
                 self.phases.push(BenchmarkPhase {
                     name: name.into(),
-                    start_time: Some(Instant::now().into()),
+                    start_time: Some(epoch.elapsed()),
                     end_time: None,
                 });
             } else if line.starts_with("/forc-perf stop ") {
@@ -215,17 +221,20 @@ impl Benchmark {
                 );
 
                 // Set the end time of the benchmark
-                phase.end_time = Some(Instant::now().into());
+                phase.end_time = Some(epoch.elapsed());
             }
         }
     }
 
     fn spawn_perf_thread(
+        epoch: &Instant,
         pid: sysinfo::Pid,
         stop_perf_rx: Receiver<()>,
         stop_readline_rx: Receiver<()>,
-        frames: SerdeFrames,
+        frames: Arc<Mutex<Vec<BenchmarkFrame>>>,
     ) {
+        let epoch = epoch.clone();
+
         let mut system = sysinfo::System::new();
 
         let num_cpus = {
@@ -267,7 +276,7 @@ impl Benchmark {
             let disk_usage = process.disk_usage();
 
             frames.lock().unwrap().push(BenchmarkFrame {
-                timestamp: frame_start.into(),
+                timestamp: frame_start.duration_since(epoch),
                 cpu_usage,
                 memory_usage,
                 virtual_memory_usage,
@@ -293,9 +302,9 @@ pub struct BenchmarkPhase {
     /// The name of the benchmark phase.
     pub name: String,
     /// The start time of the benchmark phase.
-    pub start_time: Option<SerdeInstant>,
+    pub start_time: Option<Duration>,
     /// The end time of the benchmark phase.
-    pub end_time: Option<SerdeInstant>,
+    pub end_time: Option<Duration>,
 }
 
 impl BenchmarkFrame {
@@ -307,7 +316,7 @@ impl BenchmarkFrame {
 #[derive(Clone, Debug, Serialize)]
 pub struct BenchmarkFrame {
     /// The time that the frame was captured.
-    pub timestamp: SerdeInstant,
+    pub timestamp: Duration,
     /// The process-specific CPU usage at the time the frame was captured.
     pub cpu_usage: f32,
     /// The total process-specific memory usage (in bytes) at the time the frame was captured.
@@ -322,76 +331,6 @@ pub struct BenchmarkFrame {
     pub disk_total_read_bytes: u64,
     /// The number of bytes the process has read from disk since the last refresh at the time the frame was captured.
     pub disk_read_bytes: u64,
-}
-
-#[derive(Clone, Debug)]
-pub struct SerdeInstant(Instant);
-
-impl serde::Serialize for SerdeInstant {
-    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
-        // Convert the Instant to a duration since the UNIX_EPOCH
-        let duration_since_epoch = std::time::SystemTime::now()
-            .duration_since(std::time::UNIX_EPOCH)
-            .expect("Time went backwards")
-            + (self.0 - Instant::now());
-
-        // Serialize the duration as seconds and nanoseconds
-        let seconds = duration_since_epoch.as_secs();
-        let nanos = duration_since_epoch.subsec_nanos();
-
-        // Serialize as a tuple of (seconds, nanoseconds)
-        (seconds, nanos).serialize(serializer)
-    }
-}
-
-impl From<Instant> for SerdeInstant {
-    fn from(instant: Instant) -> Self {
-        Self(instant)
-    }
-}
-
-impl Deref for SerdeInstant {
-    type Target = Instant;
-
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-
-impl DerefMut for SerdeInstant {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-
-#[derive(Clone, Debug)]
-pub struct SerdeFrames(Arc<Mutex<Vec<BenchmarkFrame>>>);
-
-impl From<Arc<Mutex<Vec<BenchmarkFrame>>>> for SerdeFrames {
-    fn from(frames: Arc<Mutex<Vec<BenchmarkFrame>>>) -> Self {
-        Self(frames)
-    }
-}
-
-impl serde::Serialize for SerdeFrames {
-    fn serialize<S: serde::Serializer>(&self, serializer: S) -> Result<S::Ok, S::Error> {
-        // Serialize the frames as a reference to the inner vector
-        self.0.lock().unwrap().as_slice().serialize(serializer)
-    }
-}
-
-impl Deref for SerdeFrames {
-    type Target = Arc<Mutex<Vec<BenchmarkFrame>>>;
-
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-
-impl DerefMut for SerdeFrames {
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
 }
 
 #[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]

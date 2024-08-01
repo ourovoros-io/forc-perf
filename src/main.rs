@@ -1,5 +1,7 @@
 #![warn(clippy::all, clippy::pedantic)]
 
+use std::time::Instant;
+
 use types::Benchmarks;
 
 pub mod types;
@@ -8,8 +10,12 @@ pub mod utils;
 pub type Result<T> = std::result::Result<T, Box<dyn std::error::Error>>;
 
 fn main() -> Result<()> {
+    // Get the program-specific epoch
+    let epoch = Instant::now();
+
     // Get the system specifications
     let system_specs = utils::system_specs()?;
+
     // Create a mutable array of new benchmarks to be performed
     let mut benchmarks = utils::generate_benchmarks("./tests/")?;
 
@@ -18,7 +24,7 @@ fn main() -> Result<()> {
 
     // Run all of the benchmarks
     for benchmark in &mut benchmarks {
-        benchmark.run();
+        benchmark.run(&epoch);
     }
 
     // Get the end time of the entire benchmarking process
@@ -34,22 +40,14 @@ fn main() -> Result<()> {
         println!(
             "    Benchmark \"{}\" took {:?} in total:",
             benchmark.name,
-            benchmark
-                .end_time
-                .clone()
-                .unwrap()
-                .duration_since(*benchmark.start_time.clone().unwrap()),
+            benchmark.end_time.clone().unwrap(),
         );
 
         for phase in &benchmark.phases {
             println!(
                 "        Phase \"{}\" took {:?} in total:",
                 phase.name,
-                phase
-                    .end_time
-                    .clone()
-                    .unwrap()
-                    .duration_since(*phase.start_time.clone().unwrap()),
+                phase.end_time.clone().unwrap(),
             );
         }
         println!(
@@ -57,7 +55,7 @@ fn main() -> Result<()> {
             format!("{:#?}", benchmark.frames).replace('\n', "\n            "),
         );
     }
-    
+
     let benchmarks_output = Benchmarks {
         system_specs,
         benchmarks,

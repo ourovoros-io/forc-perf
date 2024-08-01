@@ -6,6 +6,6 @@ edition = "2021"
 [dependencies]
 crossbeam-channel = "0.5"
 sysinfo = { version = "0.31.0", features = ["serde"] }
-serde = { version = "1.0.204", features = ["derive"] }
+serde = { version = "1.0.204", features = ["derive", "rc"] }
 serde_json = "1.0.121"
 walkdir = "2.5.0"
