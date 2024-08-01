@@ -26,6 +26,8 @@ pub struct Benchmark {
     pub start_time: Option<Duration>,
     /// The end time of the benchmark.
     pub end_time: Option<Duration>,
+    /// The size of the bytecode of the compiled benchmark.
+    pub bytecode_size: Option<usize>,
     /// The phases of the benchmark.
     pub phases: Vec<BenchmarkPhase>,
     /// The performance frames collected from the benchmark.
@@ -41,6 +43,7 @@ impl Benchmark {
             path: path.into(),
             start_time: None,
             end_time: None,
+            bytecode_size: None,
             phases: vec![],
             frames: Arc::new(Mutex::new(Vec::new())).into(),
         }
@@ -222,6 +225,14 @@ impl Benchmark {
 
                 // Set the end time of the benchmark
                 phase.end_time = Some(epoch.elapsed());
+            } else if line.starts_with("/forc-perf size ") {
+                // Parse the size of the bytecode compiled for the benchmark code from the end of the line
+                self.bytecode_size = Some(
+                    line.trim_start_matches("/forc-perf size ")
+                        .trim_end()
+                        .parse()
+                        .unwrap()
+                );
             }
         }
     }
