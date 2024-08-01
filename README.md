@@ -2,8 +2,8 @@
 
 ## Description
 
-This project is a profiler for the Sway compiler. It is designed to be lightweight and does not poison the data that it collects from the compiler.
-It collects frames of data and timestamps for all the different compiler passes and the time it takes to run them. It also collects the time it takes to run the entire compiler.
+This project is a profiler for the Sway compiler. It is designed to be lightweight and collect poison free data from the compiler.
+It collects frames of data and timestamps for all the different compiler passes and the time it takes to run them. It also collects the time it takes to run the entire compilation.
 
 ## Design
 
