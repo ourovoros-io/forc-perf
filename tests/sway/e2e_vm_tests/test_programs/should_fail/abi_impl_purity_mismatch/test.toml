@@ -1,0 +1,3 @@
+category = "fail"
+
+# check: $()Storage attribute access mismatch. The function "test_function" in ABI "MyContract" requires the storage attribute(s) #[storage(read)].

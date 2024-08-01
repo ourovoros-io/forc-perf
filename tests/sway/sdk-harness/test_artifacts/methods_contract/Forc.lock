@@ -1,0 +1,20 @@
+[[package]]
+name = 'core'
+source = 'path+from-root-051EC93A63B1E039'
+
+[[package]]
+name = 'methods_abi'
+source = 'path+from-root-051EC93A63B1E039'
+
+[[package]]
+name = 'methods_contract'
+source = 'member'
+dependencies = [
+    'methods_abi',
+    'std',
+]
+
+[[package]]
+name = 'std'
+source = 'path+from-root-051EC93A63B1E039'
+dependencies = ['core']

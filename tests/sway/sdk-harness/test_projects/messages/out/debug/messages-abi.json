@@ -1,0 +1,577 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "bool",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "enum MyEnum",
+      "components": [
+        {
+          "name": "FirstVariant",
+          "type": 6,
+          "typeArguments": null
+        },
+        {
+          "name": "SecondVariant",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        6
+      ]
+    },
+    {
+      "typeId": 5,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "generic V",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 7,
+      "type": "str[4]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 8,
+      "type": "struct MyStruct",
+      "components": [
+        {
+          "name": "first_field",
+          "type": 5,
+          "typeArguments": null
+        },
+        {
+          "name": "second_field",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        5
+      ]
+    },
+    {
+      "typeId": 9,
+      "type": "u16",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 10,
+      "type": "u32",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 11,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 12,
+      "type": "u8",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_array",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_b256",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_bool",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 4,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 2,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_enum",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 7,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_string",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 8,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 11,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_struct",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_u16",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_u32",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_u64",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 12,
+          "typeArguments": null
+        },
+        {
+          "name": "coins",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_typed_message_u8",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [
+    {
+      "messageId": 0,
+      "messageType": {
+        "name": "",
+        "type": 1,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 1,
+      "messageType": {
+        "name": "",
+        "type": 2,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 2,
+      "messageType": {
+        "name": "",
+        "type": 3,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 3,
+      "messageType": {
+        "name": "",
+        "type": 4,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 2,
+            "typeArguments": null
+          }
+        ]
+      }
+    },
+    {
+      "messageId": 4,
+      "messageType": {
+        "name": "",
+        "type": 7,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 5,
+      "messageType": {
+        "name": "",
+        "type": 8,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 11,
+            "typeArguments": null
+          }
+        ]
+      }
+    },
+    {
+      "messageId": 6,
+      "messageType": {
+        "name": "",
+        "type": 9,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 7,
+      "messageType": {
+        "name": "",
+        "type": 10,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 8,
+      "messageType": {
+        "name": "",
+        "type": 11,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 9,
+      "messageType": {
+        "name": "",
+        "type": 12,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 10,
+      "messageType": {
+        "name": "",
+        "type": 1,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 11,
+      "messageType": {
+        "name": "",
+        "type": 2,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 12,
+      "messageType": {
+        "name": "",
+        "type": 3,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 13,
+      "messageType": {
+        "name": "",
+        "type": 4,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 2,
+            "typeArguments": null
+          }
+        ]
+      }
+    },
+    {
+      "messageId": 14,
+      "messageType": {
+        "name": "",
+        "type": 7,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 15,
+      "messageType": {
+        "name": "",
+        "type": 8,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 11,
+            "typeArguments": null
+          }
+        ]
+      }
+    },
+    {
+      "messageId": 16,
+      "messageType": {
+        "name": "",
+        "type": 9,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 17,
+      "messageType": {
+        "name": "",
+        "type": 10,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 18,
+      "messageType": {
+        "name": "",
+        "type": 11,
+        "typeArguments": null
+      }
+    },
+    {
+      "messageId": 19,
+      "messageType": {
+        "name": "",
+        "type": 12,
+        "typeArguments": null
+      }
+    }
+  ],
+  "configurables": []
+}

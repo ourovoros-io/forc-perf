@@ -1,0 +1,8 @@
+[[package]]
+name = 'core'
+source = 'path+from-root-8EECC8A749908BB3'
+
+[[package]]
+name = 'excess_fn_arguments'
+source = 'member'
+dependencies = ['core']

@@ -1,0 +1,5 @@
+category = "fail"
+
+# check: $()Used feature is currently not implemented
+# check: $()MY_DATA1
+# nextln: $()Supporting constant values of this type in patterns is currently not implemented.

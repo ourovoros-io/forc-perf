@@ -1,0 +1,214 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "(_, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "(_, _, _, _, _, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 9,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 10,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "__tuple_element",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "[_; 2]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "enum Identity",
+      "components": [
+        {
+          "name": "Address",
+          "type": 7,
+          "typeArguments": null
+        },
+        {
+          "name": "ContractId",
+          "type": 8,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "str[9]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 7,
+      "type": "struct Address",
+      "components": [
+        {
+          "name": "bits",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 8,
+      "type": "struct ContractId",
+      "components": [
+        {
+          "name": "bits",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 9,
+      "type": "struct Generic",
+      "components": [
+        {
+          "name": "f",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        5
+      ]
+    },
+    {
+      "typeId": 10,
+      "type": "struct IdentityAliasWrapper",
+      "components": [
+        {
+          "name": "i",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "x",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "y",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "z",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "w",
+          "type": 9,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 10,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "u",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "s",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "name": "foo",
+      "output": {
+        "name": "",
+        "type": 1,
+        "typeArguments": null
+      },
+      "attributes": null
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

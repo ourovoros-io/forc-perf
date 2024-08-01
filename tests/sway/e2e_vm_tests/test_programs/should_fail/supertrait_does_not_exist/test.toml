@@ -1,0 +1,3 @@
+category = "fail"
+
+# check: $()Cannot find trait "C" in this scope.

@@ -1,0 +1,8 @@
+[[package]]
+name = "core"
+source = "path+from-root-E1A3EA1914E4253A"
+
+[[package]]
+name = "increment_abi"
+source = "member"
+dependencies = ["core"]

@@ -1,0 +1,376 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "enum Identity",
+      "components": [
+        {
+          "name": "Address",
+          "type": 5,
+          "typeArguments": null
+        },
+        {
+          "name": "ContractId",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "raw untyped ptr",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "struct Address",
+      "components": [
+        {
+          "name": "bits",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "struct ContractId",
+      "components": [
+        {
+          "name": "bits",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 7,
+      "type": "struct RawVec",
+      "components": [
+        {
+          "name": "ptr",
+          "type": 4,
+          "typeArguments": null
+        },
+        {
+          "name": "cap",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        3
+      ]
+    },
+    {
+      "typeId": 8,
+      "type": "struct Vec",
+      "components": [
+        {
+          "name": "buf",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 3,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "len",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        3
+      ]
+    },
+    {
+      "typeId": 9,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "burn_amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "sub_id",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "burn_coins",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "coins",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "asset_id",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "target",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "name": "force_transfer_coins",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "sub_id",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "generic_mint_to",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "asset_id",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "generic_transfer",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "asset_id",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "target",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_balance",
+      "output": {
+        "name": "",
+        "type": 9,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 5,
+          "typeArguments": null
+        },
+        {
+          "name": "sub_id",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "mint_and_send_to_address",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 6,
+          "typeArguments": null
+        },
+        {
+          "name": "sub_id",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "mint_and_send_to_contract",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "mint_amount",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "sub_id",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "mint_coins",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "recipient",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "msg_data",
+          "type": 8,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 9,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "coins",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "name": "send_message",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "coins",
+          "type": 9,
+          "typeArguments": null
+        },
+        {
+          "name": "asset_id",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "to",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "name": "transfer_coins_to_address",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": null
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

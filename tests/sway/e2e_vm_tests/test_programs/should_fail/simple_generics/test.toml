@@ -1,0 +1,11 @@
+category = "fail"
+
+# check: fn generic<T>(input: T) -> T {
+# nextln: $()This declaration is never used.
+# nextln: $()do_it(input)
+
+# check: do_it(input)
+# nextln: $()Mismatched types.
+# nextln: $()expected: u64
+# nextln: $()found:    T.
+# nextln: $()help: The argument that has been provided to this function's type does not match the declared type of the parameter in the function declaration.

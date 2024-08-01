@@ -1,0 +1,16 @@
+category = "fail"
+
+# check: fn foo(s: str[7]) -> str[7] {
+# check: $()expected: u64
+# check: $()found:    str[7]
+# check: $()The definition of this function must match the one in the ABI "MyContract" declaration.
+
+# check: fn bar() -> u64 {
+# nextln: $()expected: u32
+# nextln: $()found:    u64
+# nextln: $()The definition of this function must match the one in the ABI "MyContract" declaration.
+
+# check: fn baz() {
+# nextln: $()expected: u64
+# nextln: $()found:    ()
+# nextln: $()The definition of this function must match the one in the ABI "MyContract" declaration.

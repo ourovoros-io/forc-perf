@@ -1,0 +1,13 @@
+[[package]]
+name = 'core'
+source = 'path+from-root-E7BBED1900347958'
+
+[[package]]
+name = 'identity_eq'
+source = 'member'
+dependencies = ['std']
+
+[[package]]
+name = 'std'
+source = 'path+from-root-E7BBED1900347958'
+dependencies = ['core']

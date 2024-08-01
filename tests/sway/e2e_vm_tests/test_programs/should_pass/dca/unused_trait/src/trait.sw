@@ -1,0 +1,4 @@
+library;
+
+pub trait Trait {
+}

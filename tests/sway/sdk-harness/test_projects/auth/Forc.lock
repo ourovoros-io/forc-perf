@@ -1,0 +1,13 @@
+[[package]]
+name = 'auth'
+source = 'member'
+dependencies = ['std']
+
+[[package]]
+name = 'core'
+source = 'path+from-root-2DA4FC95F5834167'
+
+[[package]]
+name = 'std'
+source = 'path+from-root-2DA4FC95F5834167'
+dependencies = ['core']

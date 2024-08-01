@@ -1,0 +1,714 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "(_, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 13,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "__tuple_element",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 13,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "bool",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "enum MyEnum",
+      "components": [
+        {
+          "name": "FirstVariant",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 13,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "SecondVariant",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "enum Option",
+      "components": [
+        {
+          "name": "None",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "Some",
+          "type": 10,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        10
+      ]
+    },
+    {
+      "typeId": 7,
+      "type": "enum Result",
+      "components": [
+        {
+          "name": "Ok",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "Err",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        10,
+        9
+      ]
+    },
+    {
+      "typeId": 8,
+      "type": "enum SomeError",
+      "components": [
+        {
+          "name": "SomeErrorString",
+          "type": 12,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 9,
+      "type": "generic E",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 10,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 11,
+      "type": "str[4]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 12,
+      "type": "str[5]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 13,
+      "type": "struct Address",
+      "components": [
+        {
+          "name": "bits",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 14,
+      "type": "struct MyStruct",
+      "components": [
+        {
+          "name": "first_field",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 13,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "second_field",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 15,
+      "type": "u16",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 16,
+      "type": "u32",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 17,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 18,
+      "type": "u8",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 2,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "array_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 2,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 3,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "b256_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 3,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 4,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "bool_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 4,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 5,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "enum_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 5,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 6,
+              "typeArguments": [
+                {
+                  "name": "",
+                  "type": 11,
+                  "typeArguments": null
+                }
+              ]
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "option_in_result_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 6,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 11,
+                "typeArguments": null
+              }
+            ]
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 11,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "string_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 11,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 14,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "struct_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 14,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 1,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "tuple_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 1,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 15,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u16_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 15,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 16,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u32_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 17,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u64_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 17,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 7,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 18,
+              "typeArguments": null
+            },
+            {
+              "name": "",
+              "type": 8,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u8_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 18,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

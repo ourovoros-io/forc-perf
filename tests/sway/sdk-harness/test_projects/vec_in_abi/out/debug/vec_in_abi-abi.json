@@ -1,0 +1,707 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "[_; 2]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 20,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 14,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 15,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 19,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 7,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 21,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 8,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 24,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 9,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 25,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 10,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 11,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 27,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 12,
+      "type": "[_; 9]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 13,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 14,
+      "type": "bool",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 15,
+      "type": "enum MyEnum",
+      "components": [
+        {
+          "name": "FirstVariant",
+          "type": 16,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 20,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "SecondVariant",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 16,
+      "type": "enum Option",
+      "components": [
+        {
+          "name": "None",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "Some",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        17
+      ]
+    },
+    {
+      "typeId": 17,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 18,
+      "type": "raw untyped ptr",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 19,
+      "type": "str[4]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 20,
+      "type": "struct Address",
+      "components": [
+        {
+          "name": "bits",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 21,
+      "type": "struct MyStruct",
+      "components": [
+        {
+          "name": "first_field",
+          "type": 16,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 20,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "second_field",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 22,
+      "type": "struct RawVec",
+      "components": [
+        {
+          "name": "ptr",
+          "type": 18,
+          "typeArguments": null
+        },
+        {
+          "name": "cap",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        17
+      ]
+    },
+    {
+      "typeId": 23,
+      "type": "struct Vec",
+      "components": [
+        {
+          "name": "buf",
+          "type": 22,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 17,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "len",
+          "type": 26,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        17
+      ]
+    },
+    {
+      "typeId": 24,
+      "type": "u16",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 25,
+      "type": "u32",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 26,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 27,
+      "type": "u8",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 1,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "array_test",
+      "output": {
+        "name": "",
+        "type": 2,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 13,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "b256_test",
+      "output": {
+        "name": "",
+        "type": 3,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 14,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "bool_test",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 24,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "echo_u16",
+      "output": {
+        "name": "",
+        "type": 23,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 24,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 25,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "echo_u32",
+      "output": {
+        "name": "",
+        "type": 23,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 25,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 23,
+              "typeArguments": [
+                {
+                  "name": "",
+                  "type": 25,
+                  "typeArguments": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "echo_u32_vec_in_vec",
+      "output": {
+        "name": "",
+        "type": 23,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 23,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 25,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 27,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "echo_u8",
+      "output": {
+        "name": "",
+        "type": 23,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 27,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 15,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "enum_test",
+      "output": {
+        "name": "",
+        "type": 5,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 19,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "string_test",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 21,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "struct_test",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 24,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u16_test",
+      "output": {
+        "name": "",
+        "type": 8,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 25,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u32_test",
+      "output": {
+        "name": "",
+        "type": 9,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 26,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u64_test",
+      "output": {
+        "name": "",
+        "type": 10,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 27,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "name": "u8_test",
+      "output": {
+        "name": "",
+        "type": 11,
+        "typeArguments": null
+      },
+      "attributes": null
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 23,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 23,
+              "typeArguments": [
+                {
+                  "name": "",
+                  "type": 26,
+                  "typeArguments": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "vec_in_vec_test",
+      "output": {
+        "name": "",
+        "type": 12,
+        "typeArguments": null
+      },
+      "attributes": null
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

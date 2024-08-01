@@ -1,0 +1,13 @@
+category = "fail"
+
+# check: $()warning
+# check: $()None::<T>;
+# nextln: $()This returns a value of type MyOption<T>, which is not assigned to anything and is ignored.
+
+# check: $()error
+# check: $()None::<T>;
+# nextln: $()Could not find symbol "T" in this scope.
+
+# check: $()error
+# check: $()foo()
+# nextln: $()Cannot infer type for type parameter "T". Insufficient type information provided. Try annotating its type.

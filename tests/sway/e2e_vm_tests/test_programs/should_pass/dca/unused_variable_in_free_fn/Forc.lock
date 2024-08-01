@@ -1,0 +1,8 @@
+[[package]]
+name = "core"
+source = "path+from-root-68516DD00B8C3036"
+
+[[package]]
+name = "unused_variable_in_free_fn"
+source = "member"
+dependencies = ["core"]

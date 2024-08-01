@@ -1,0 +1,21 @@
+[[package]]
+name = 'auth_caller_script'
+source = 'member'
+dependencies = [
+    'auth_testing_abi',
+    'std',
+]
+
+[[package]]
+name = 'auth_testing_abi'
+source = 'path+from-root-26A86FBDE3EF930E'
+dependencies = ['std']
+
+[[package]]
+name = 'core'
+source = 'path+from-root-26A86FBDE3EF930E'
+
+[[package]]
+name = 'std'
+source = 'path+from-root-26A86FBDE3EF930E'
+dependencies = ['core']

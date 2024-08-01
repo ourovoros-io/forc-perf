@@ -1,0 +1,13 @@
+[[package]]
+name = 'core'
+source = 'path+from-root-36670D30B34137BE'
+
+[[package]]
+name = 'smo_opcode'
+source = 'member'
+dependencies = ['std']
+
+[[package]]
+name = 'std'
+source = 'path+from-root-36670D30B34137BE'
+dependencies = ['core']

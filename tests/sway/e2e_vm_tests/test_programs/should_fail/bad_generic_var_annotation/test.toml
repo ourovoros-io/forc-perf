@@ -1,0 +1,8 @@
+category = "fail"
+
+# check: $()error
+# check: $()let new_a: B = a;
+# nextln: $()Mismatched types.
+# nextln: $()expected: B
+# nextln: $()found:    A.
+# nextln: $()help: Variable declaration's type annotation does not match up with the assigned expression's type.

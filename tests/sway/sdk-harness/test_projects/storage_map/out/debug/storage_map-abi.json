@@ -1,0 +1,2620 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "(_, _, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 17,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "[_; 3]",
+      "components": [
+        {
+          "name": "__array_element",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "bool",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "enum Enum",
+      "components": [
+        {
+          "name": "V1",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "V2",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "V3",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 6,
+      "type": "enum Option",
+      "components": [
+        {
+          "name": "None",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "Some",
+          "type": 10,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        10
+      ]
+    },
+    {
+      "typeId": 7,
+      "type": "enum Result",
+      "components": [
+        {
+          "name": "Ok",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "Err",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        10,
+        9
+      ]
+    },
+    {
+      "typeId": 8,
+      "type": "enum StorageMapError",
+      "components": [
+        {
+          "name": "OccupiedError",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        11
+      ]
+    },
+    {
+      "typeId": 9,
+      "type": "generic E",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 10,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 11,
+      "type": "generic V",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 12,
+      "type": "str[33]",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 13,
+      "type": "struct Struct",
+      "components": [
+        {
+          "name": "x",
+          "type": 15,
+          "typeArguments": null
+        },
+        {
+          "name": "y",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "z",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 14,
+      "type": "u16",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 15,
+      "type": "u32",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 16,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 17,
+      "type": "u8",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_array_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_bool_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_enum_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 12,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_str_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_struct_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_tuple_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 14,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u16_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 15,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u32_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_array_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 2,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_bool_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 4,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_enum_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 5,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_str_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 12,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_struct_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 13,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_tuple_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 1,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_u16_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 14,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_u32_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 15,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u64_to_u8_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 17,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "name": "get_from_u8_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 6,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_array_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 4,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_bool_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 5,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_enum_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 12,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_str_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 13,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_struct_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_tuple_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 14,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u16_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 15,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u32_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_array_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_bool_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_enum_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 12,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_str_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_struct_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_tuple_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 14,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_u16_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 15,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_u32_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u64_to_u8_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 17,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "insert_into_u8_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_array_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_bool_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_enum_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 12,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_str_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_struct_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_tuple_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 14,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u16_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 15,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u32_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_array_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_bool_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_enum_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_str_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_struct_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_tuple_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_u16_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_u32_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u64_to_u8_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "name": "remove_from_u8_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 2,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_array_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 4,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_bool_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 5,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_enum_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 12,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_str_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 13,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_struct_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_tuple_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 14,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u16_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 15,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u32_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 2,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_array_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 2,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 2,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 4,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_bool_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 4,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 4,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 5,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_enum_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 5,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 5,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 12,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_str_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 12,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 12,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 13,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_struct_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 13,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 13,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_tuple_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 1,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 1,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 14,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_u16_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 14,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 14,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 15,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_u32_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 15,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 15,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 16,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 17,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u64_to_u8_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 17,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 17,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 17,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 16,
+          "typeArguments": null
+        }
+      ],
+      "name": "try_insert_into_u8_to_u64_map",
+      "output": {
+        "name": "",
+        "type": 7,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 16,
+            "typeArguments": null
+          },
+          {
+            "name": "",
+            "type": 8,
+            "typeArguments": [
+              {
+                "name": "",
+                "type": 16,
+                "typeArguments": null
+              }
+            ]
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

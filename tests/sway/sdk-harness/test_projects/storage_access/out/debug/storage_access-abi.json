@@ -1,0 +1,451 @@
+{
+  "encoding": "1",
+  "types": [
+    {
+      "typeId": 0,
+      "type": "()",
+      "components": [],
+      "typeParameters": null
+    },
+    {
+      "typeId": 1,
+      "type": "(_, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "__tuple_element",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 2,
+      "type": "(_, _)",
+      "components": [
+        {
+          "name": "__tuple_element",
+          "type": 5,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 11,
+              "typeArguments": null
+            }
+          ]
+        },
+        {
+          "name": "__tuple_element",
+          "type": 5,
+          "typeArguments": [
+            {
+              "name": "",
+              "type": 11,
+              "typeArguments": null
+            }
+          ]
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 3,
+      "type": "b256",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 4,
+      "type": "bool",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 5,
+      "type": "enum Option",
+      "components": [
+        {
+          "name": "None",
+          "type": 0,
+          "typeArguments": null
+        },
+        {
+          "name": "Some",
+          "type": 6,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": [
+        6
+      ]
+    },
+    {
+      "typeId": 6,
+      "type": "generic T",
+      "components": null,
+      "typeParameters": null
+    },
+    {
+      "typeId": 7,
+      "type": "struct M",
+      "components": [
+        {
+          "name": "u",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "v",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 8,
+      "type": "struct S",
+      "components": [
+        {
+          "name": "a",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "b",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "c",
+          "type": 10,
+          "typeArguments": null
+        },
+        {
+          "name": "d",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 9,
+      "type": "struct Simple",
+      "components": [
+        {
+          "name": "x",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "y",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "b",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "z",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "w",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 10,
+      "type": "struct T",
+      "components": [
+        {
+          "name": "x",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "y",
+          "type": 3,
+          "typeArguments": null
+        },
+        {
+          "name": "z",
+          "type": 7,
+          "typeArguments": null
+        }
+      ],
+      "typeParameters": null
+    },
+    {
+      "typeId": 11,
+      "type": "u64",
+      "components": null,
+      "typeParameters": null
+    }
+  ],
+  "functions": [
+    {
+      "inputs": [],
+      "name": "clears_storage_key",
+      "output": {
+        "name": "",
+        "type": 4,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "map_in_struct_read",
+      "output": {
+        "name": "",
+        "type": 2,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 1,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 1,
+          "typeArguments": null
+        }
+      ],
+      "name": "map_in_struct_write",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "map_read",
+      "output": {
+        "name": "",
+        "type": 5,
+        "typeArguments": [
+          {
+            "name": "",
+            "type": 11,
+            "typeArguments": null
+          }
+        ]
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "key",
+          "type": 11,
+          "typeArguments": null
+        },
+        {
+          "name": "value",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "map_write",
+      "output": {
+        "name": "",
+        "type": 0,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 3,
+          "typeArguments": null
+        }
+      ],
+      "name": "write_and_read_b256",
+      "output": {
+        "name": "",
+        "type": 3,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "s",
+          "type": 8,
+          "typeArguments": null
+        }
+      ],
+      "name": "write_and_read_struct_1",
+      "output": {
+        "name": "",
+        "type": 8,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "s",
+          "type": 8,
+          "typeArguments": null
+        }
+      ],
+      "name": "write_and_read_struct_2",
+      "output": {
+        "name": "",
+        "type": 8,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "simple",
+          "type": 9,
+          "typeArguments": null
+        }
+      ],
+      "name": "write_and_read_struct_simple",
+      "output": {
+        "name": "",
+        "type": 9,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    },
+    {
+      "inputs": [
+        {
+          "name": "input",
+          "type": 11,
+          "typeArguments": null
+        }
+      ],
+      "name": "write_and_read_u64",
+      "output": {
+        "name": "",
+        "type": 11,
+        "typeArguments": null
+      },
+      "attributes": [
+        {
+          "name": "storage",
+          "arguments": [
+            "read",
+            "write"
+          ]
+        }
+      ]
+    }
+  ],
+  "loggedTypes": [],
+  "messagesTypes": [],
+  "configurables": []
+}

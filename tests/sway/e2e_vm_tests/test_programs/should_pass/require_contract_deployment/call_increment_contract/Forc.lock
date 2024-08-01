@@ -1,0 +1,30 @@
+[[package]]
+name = "call_increment_contract"
+source = "member"
+dependencies = [
+    "dynamic_contract_call",
+    "increment_abi",
+    "std",
+]
+
+[[package]]
+name = "core"
+source = "path+from-root-2711CA1D0E2938B8"
+
+[[package]]
+name = "dynamic_contract_call"
+source = "path+from-root-2711CA1D0E2938B8"
+dependencies = ["std"]
+
+[[package]]
+name = "increment_abi"
+source = "path+from-root-2711CA1D0E2938B8"
+dependencies = [
+    "core",
+    "std",
+]
+
+[[package]]
+name = "std"
+source = "path+from-root-2711CA1D0E2938B8"
+dependencies = ["core"]

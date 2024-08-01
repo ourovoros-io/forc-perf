@@ -1,0 +1,4 @@
+library;
+
+pub fn color() {
+}

@@ -1,0 +1,7 @@
+category = "fail"
+
+# check: $()This returns a value of type u64, which is not assigned to anything and is ignored.
+
+# check: $()Storage attribute access mismatch. Try giving the surrounding function more access by adding "#[storage(read)]" to the function declaration.
+
+# check: $()Storage attribute access mismatch. Try giving the surrounding function more access by adding "#[storage(read)]" to the function declaration.
