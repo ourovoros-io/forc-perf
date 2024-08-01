@@ -1,3 +1,4 @@
 /target*
 /sway*
 Cargo.lock
+.DS_Store
