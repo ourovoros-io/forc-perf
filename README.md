@@ -35,6 +35,13 @@ The Forc-perf performs the following steps:
 ## Data Structures
 
 ```rust
+/// A collection of benchmarks and system specifications.
+#[derive(Debug, Serialize)]
+pub struct Benchmarks {
+    pub system_specs: SystemSpecs,
+    pub benchmarks: Vec<Benchmark>,
+}
+
 /// Benchmark metadata and phase-specific performance data.
 #[derive(Clone, Debug, serde::Serialize)]
 pub struct Benchmark {
@@ -82,5 +89,46 @@ pub struct BenchmarkFrame {
     pub disk_total_read_bytes: u64,
     /// The number of bytes the process has read from disk since the last refresh at the time the frame was captured.
     pub disk_read_bytes: u64,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct SystemSpecs {
+    #[serde(skip_serializing)]
+    pub global_cpu_usage: f64,
+    pub cpus: Vec<Cpu>,
+    pub physical_core_count: i64,
+    pub total_memory: i64,
+    pub free_memory: i64,
+    pub available_memory: i64,
+    pub used_memory: i64,
+    pub total_swap: i64,
+    pub free_swap: i64,
+    pub used_swap: i64,
+    pub uptime: i64,
+    pub boot_time: i64,
+    pub load_average: LoadAverage,
+    pub name: String,
+    pub kernel_version: String,
+    pub os_version: String,
+    pub long_os_version: String,
+    pub distribution_id: String,
+    pub host_name: String,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct Cpu {
+    #[serde(skip_serializing)]
+    pub cpu_usage: f64,
+    pub name: String,
+    pub vendor_id: String,
+    pub brand: String,
+    pub frequency: i64,
+}
+
+#[derive(Default, Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct LoadAverage {
+    pub one: f64,
+    pub five: f64,
+    pub fifteen: f64,
 }
 ```
