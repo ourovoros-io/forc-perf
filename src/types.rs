@@ -35,6 +35,11 @@ pub struct Benchmark {
 }
 
 impl Benchmark {
+    /// The path to the `forc` binary.
+    /// TODO: change this to `forc` when the PR is merged in the compiler
+    const FORC_PATH: &'static str =
+        "/Users/georgiosdelkos/Documents/GitHub/Fuel/forked/sway/target/release/forc";
+
     /// Creates a new benchmark using the supplied `name` and `path`.
     #[inline]
     pub fn new<S: ToString, P: Into<PathBuf>>(name: &S, path: P) -> Self {
@@ -45,11 +50,19 @@ impl Benchmark {
             end_time: None,
             bytecode_size: None,
             phases: vec![],
-            frames: Arc::new(Mutex::new(Vec::new())).into(),
+            frames: Arc::new(Mutex::new(Vec::new())),
         }
     }
 
     /// Runs the benchmark.
+    ///
+    /// # Arguments
+    ///
+    /// * `epoch` - The epoch time of the benchmark.
+    ///
+    /// # Panics
+    ///
+    /// If the benchmark's path is not a directory.
     pub fn run(&mut self, epoch: &Instant) {
         // Ensure the benchmark's path is a directory we can run `forc build` in
         assert!(
@@ -63,20 +76,18 @@ impl Benchmark {
 
         // Spawn the `forc build` child command in the benchmark's directory
         // NOTE: stdin and stdout are piped so that we can use them to signal individual phases
-        let mut command = Command::new(
-            "/Users/georgiosdelkos/Documents/GitHub/Fuel/forked/sway/target/release/forc",
-        )
-        .arg("build")
-        .arg("--profile-phases")
-        .arg("--time-phases")
-        .arg("--log-level")
-        .arg("5")
-        .stdin(Stdio::piped())
-        .stdout(Stdio::piped())
-        .stderr(Stdio::null())
-        .current_dir(self.path.clone())
-        .spawn()
-        .unwrap();
+        let mut command = Command::new(Self::FORC_PATH)
+            .arg("build")
+            .arg("--profile-phases")
+            .arg("--time-phases")
+            .arg("--log-level")
+            .arg("5")
+            .stdin(Stdio::piped())
+            .stdout(Stdio::piped())
+            .stderr(Stdio::null())
+            .current_dir(self.path.clone())
+            .spawn()
+            .unwrap();
 
         // Create an unbounded channel to send/receive line strings between the readline thread and the main thread
         let (readline_tx, readline_rx) = unbounded();
@@ -114,6 +125,7 @@ impl Benchmark {
         self.end_time = Some(epoch.elapsed());
     }
 
+    #[must_use]
     pub fn verify_path(&self) -> bool {
         // Ensure the benchmark's path exists
         if !self.path.exists() {
@@ -231,7 +243,7 @@ impl Benchmark {
                     line.trim_start_matches("/forc-perf size ")
                         .trim_end()
                         .parse()
-                        .unwrap()
+                        .unwrap(),
                 );
             }
         }
@@ -244,7 +256,7 @@ impl Benchmark {
         stop_readline_rx: Receiver<()>,
         frames: Arc<Mutex<Vec<BenchmarkFrame>>>,
     ) {
-        let epoch = epoch.clone();
+        let epoch = *epoch;
 
         let mut system = sysinfo::System::new();
 

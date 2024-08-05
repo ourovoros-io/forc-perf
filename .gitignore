@@ -2,3 +2,4 @@
 /sway*
 Cargo.lock
 .DS_Store
+benchmarks.json

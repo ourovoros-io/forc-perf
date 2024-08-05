@@ -1,6 +1,19 @@
 use crate::types::{Benchmark, SystemSpecs};
 
 /// Collect all profiling targets in the given directory and return a map of the target name to the path canonical path.
+///
+/// # Arguments
+///
+/// * `path` - A path to the directory containing the profiling targets.
+///
+/// # Returns
+///
+/// A `Result` containing a `Vec` of `Benchmark` structs.
+///
+/// # Errors
+///
+/// If the path is not a valid directory.
+///
 pub fn generate_benchmarks<P: AsRef<std::path::Path>>(
     path: P,
 ) -> Result<Vec<Benchmark>, Box<dyn std::error::Error>> {
@@ -29,6 +42,15 @@ pub fn generate_benchmarks<P: AsRef<std::path::Path>>(
 }
 
 /// Returns the full system specifications as a `SystemSpecs` struct.
+///
+/// # Returns
+///
+/// A `Result` containing a `SystemSpecs` struct.
+///
+/// # Errors
+///
+/// If the system specifications cannot be collected.
+/// If the system specifications cannot be serialized.
 pub fn system_specs() -> Result<crate::types::SystemSpecs, Box<dyn std::error::Error>> {
     let mut sys = sysinfo::System::new_all();
     sys.refresh_all();
